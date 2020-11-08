@@ -52,10 +52,40 @@ public double getFee(){
 	return this.fee;
 }
 ```
-方法五： 
+方法五： 抛出异常处理的方法并用if进行判断是否缴费成功。
 ```
-
+public static void testTwo(String y,Doctoralcandidate m) throws Trydemo{
+	if (y.equals("1")){
+	System.out.println("您已缴费成功！");
+	System.out.println(m.Name +"男,26,学费：4500,工资：10000,应纳税额："+(0.03*(m.getPay()-m.getFee()-3000)));
+	}
+	else{
+	    System.out.println("error");
+		}
+```
+方法六：设计的异常处理机制，采用Scanner类实现运行时交互式输入。
+```
+try{
+	System.out.println("李丝丝，女，24");
+	System.out.println("应交纳学费："+b.getFee()+"缴费完成后请输入1");
+	Scanner i= new Scanner(System.in);
+	String n = i.nextLine();
+	testTwo(n,b);
+	}
+catch(Exception e){
+	System.out.println("程序出错啦！");
+    e.printStackTrace();
+    }
+```
+方法七：打印出实例化的两名博士研究生缴费信息。
+```
+public static void Doctor1(Doctoralcandidate a){
+System.out.println("张思锐,男,26,学费为：4500,工资为：10000,应纳税额："+(0.03*(a.getPay()-a.getFee()-3000)));}
+public static void Doctor2(Doctoralcandidate b){
+System.out.println("李丝丝,女,24,学费为：4300,工资为：8000,应纳税额："+(0.03*(b.getPay()-b.getFee()-3000)));}
+}
 ```
 ## 六、实验结果
+
 ## 七、实验感想
 本次实验我能够掌握如何定义抽象类和抽象方法，并实现接口；比较困难的是异常处理机制这方面，一开始写的时候没有头绪，我便看了书上关于异常处理的内容并与同学交流，最终得出结果。
