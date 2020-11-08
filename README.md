@@ -83,6 +83,13 @@ catch(Exception e){
     e.printStackTrace();
     }
 ```
+方法七：设计异常处理类。
+```
+public class Trydemo extends Exception{
+		String x = "输入有误，请重新输入！";
+		String getException(){
+			return x;}}
+```
 ## 六、实验结果
 ![实验结果.png](https://i.loli.net/2020/11/08/EO9c1lb5viIq4YN.png)
 ## 七、实验感想
