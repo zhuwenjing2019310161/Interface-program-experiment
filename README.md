@@ -20,11 +20,42 @@
 3、定义一个Test类，用于实例化两名博士研究生并统计年收入和学费，再计算他们的年应缴纳税额输出。  
 4、编写一个异常处理机制，当与输入情况不符时调用此机制进行异常处理。
 ## 五、实验方法  
-方法一：  
-方法二：  
-方法三：  
-方法四：  
+方法一：  学生管理接口中学生交纳学费和查学费的方法。
+```
+public interface Studentmanagement {
+public abstract void setFee(double fee);
+public abstract double getFee(); 
+}
+```
+方法二：  教师管理接口中教师查询薪水和接收薪水的方法。
+```
+public interface TeacherManagement {
+public abstract void setPay(double pay);
+public abstract double getPay();
+}
+
+```
+方法三：  实现学生查询学费和交学费的方法。
+```
+public void setPay(double pay){
+	this.pay=pay;
+}
+public double getPay(){
+	return this.pay;}
+```
+方法四：  实现教师查询薪水和接收薪水的方法。
+```
+public void setFee(double fee){
+	this.fee=fee;
+}
+public double getFee(){
+	return this.fee;
+}
+```
 方法五： 
+```
+
+```
 ## 六、实验结果
 ## 七、实验感想
 本次实验我能够掌握如何定义抽象类和抽象方法，并实现接口；比较困难的是异常处理机制这方面，一开始写的时候没有头绪，我便看了书上关于异常处理的内容并与同学交流，最终得出结果。
